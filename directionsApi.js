@@ -82,7 +82,7 @@ const queryLocation = (lat, lng) => request({
 });
 
 const mapTimesToTimestamps = (locations, startTime) => locations.map((location) => {
-  const timestamp = startTime + (location.time); // convert from s to ms
+  const timestamp = startTime + (location.time);
   return { ...location, time: timestamp };
 });
 const getWeatherPoints = async ({
